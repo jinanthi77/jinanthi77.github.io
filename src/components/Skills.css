@@ -1,0 +1,81 @@
+.skills {
+  padding-block: var(--section-padding);
+  text-align: center;
+}
+
+.skills .section-subheading {
+  margin-inline: auto;
+}
+
+.skills__groups {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skills__group h3 {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.skills__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.skills__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-white);
+  color: #000;
+  font-weight: 600;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-sm);
+}
+/* ---------- Pop-up animation ---------- */
+
+/* Badges stay hidden until the section scrolls into view */
+.skills:not(.is-visible) .skills__badge {
+  opacity: 0;
+}
+
+.skills.is-visible .skills__badge {
+  animation: badge-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes badge-pop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Small lift when you hover a badge */
+.skills__badge {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills__badge:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(217, 15, 18, 0.35);
+}
+
+/* No movement for people who turned animations off on their device */
+@media (prefers-reduced-motion: reduce) {
+  .skills:not(.is-visible) .skills__badge {
+    opacity: 1;
+  }
+  .skills.is-visible .skills__badge {
+    animation: none;
+  }
+}
