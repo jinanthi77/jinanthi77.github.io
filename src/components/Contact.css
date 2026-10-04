@@ -107,3 +107,32 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .contact__form {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .btn--submit {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .contact__social {
+    gap: 0.6rem;
+  }
+
+  .contact__social a {
+    width: 44px;
+    height: 44px;
+  }
+}

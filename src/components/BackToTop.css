@@ -18,3 +18,12 @@
 .back-to-top:hover {
   transform: translateY(-3px);
 }
+
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 46px;
+    height: 46px;
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
