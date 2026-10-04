@@ -8,12 +8,15 @@
   grid-template-columns: 1.3fr 1fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
+  min-width: 0;
 }
 
 .contact__form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  width: 100%;
+  min-width: 0;
   background: #000;
   border: 2px solid var(--color-white);
   border-radius: var(--radius-md);
@@ -23,6 +26,9 @@
 
 .contact__form input,
 .contact__form textarea {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   background: #000;
   border: 2px solid var(--color-white);
   border-radius: var(--radius-md);
@@ -122,6 +128,7 @@
 
   .btn--submit {
     width: 100%;
+    max-width: 100%;
     padding: 0.9rem 1.5rem;
     text-align: center;
     margin-bottom: 1rem;
