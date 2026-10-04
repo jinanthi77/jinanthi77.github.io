@@ -9,7 +9,7 @@ const siteConfig = {
   title: "UI/UX Designer & Project Manager",
 
   // Resume button — link to a PDF (e.g. upload it to /public and use "/resume.pdf")
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/H H Jinanthi Hansika.pdf",
 
   // Contact button — opens the visitor's email app addressed to you
   email: "jinanthihansika@gmail.com",
